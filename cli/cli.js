@@ -77,6 +77,7 @@ show.users = {
     exec: async function() {
         let tokens = await _data.list(TOKEN_DB);
 
+        // Use set to avoid email duplication, in case if user used different cookies to log in
         emails = new Set();
 
         for (let token of tokens) {
