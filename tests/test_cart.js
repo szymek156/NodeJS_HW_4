@@ -20,9 +20,9 @@ class TestCart extends TestBase {
     }
 
     tearDown() {
-        Common.cleanDB(config.USER_DB);
-        Common.cleanDB(config.TOKEN_DB);
-        Common.cleanDB(config.CART_DB);
+        // Common.cleanDB(config.USER_DB);
+        // Common.cleanDB(config.TOKEN_DB);
+        // Common.cleanDB(config.CART_DB);
     }
 
     async testCartCanBeCreated() {

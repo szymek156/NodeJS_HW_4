@@ -46,4 +46,4 @@ const TestCart   = require("./tests/test_cart");
 let runner = new TestRunner([TestServer, TestUser, TestToken, TestCart]);
 
 let exitNodeAfterFinish = false;
-// runner.runAll(exitNodeAfterFinish);
+runner.runAll(exitNodeAfterFinish);

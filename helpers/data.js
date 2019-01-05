@@ -98,6 +98,16 @@ lib.list = function(dir, callback) {
     });
 };
 
+lib.stat = function(dir, file, callback) {
+    fs.stat(path.join(lib.baseDir, dir, file + ".json"), function(err, data) {
+        if (!err && data) {
+            callback(false, data);
+        } else {
+            callback(err);
+        }
+    });
+};
+
 // Promisified version, because I can't look on those callbacks.
 let libp = {};
 
@@ -105,5 +115,7 @@ libp.create = util.promisify(lib.create);
 libp.read   = util.promisify(lib.read);
 libp.update = util.promisify(lib.update);
 libp.delete = util.promisify(lib.delete);
+libp.list   = util.promisify(lib.list);
+libp.stat   = util.promisify(lib.stat);
 
 module.exports = libp;
