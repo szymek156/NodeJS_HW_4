@@ -1,13 +1,19 @@
+Launch node .
+
+Example usage (note dot before command, it's PERPL specific):
+
 > .help
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Avaliable commands:
+Avaliable commands:
  menu        View all the current menu items
  orders      View all the recent orders in the system (orders placed in the last 24 hours)
  order       Lookup the details of a specific order by order ID
  users       View all the users who have signed up in the last 24 hours
  user        Lookup the details of a specific user by email address
  help        Shows avaliable commands
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------> .show orders
+
+> .show orders
 [ '0wpw5g6yhsrk9gsus725' ]
+
 > .show order 0wpw5g6yhsrk9gsus725
 { items:
    [ { name: 'Caesar Selections',
